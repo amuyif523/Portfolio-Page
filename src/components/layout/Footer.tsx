@@ -2,6 +2,7 @@
 
 import { Container } from './Container'
 import { useLenis } from 'lenis/react'
+import { socialLinks } from '@/lib/content/socials'
 
 export function Footer() {
   const lenis = useLenis()
@@ -15,22 +16,17 @@ export function Footer() {
         
         <div className="flex items-center gap-8">
           <div className="flex gap-8">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-mono uppercase tracking-wider hover:text-accent transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-mono uppercase tracking-wider hover:text-accent transition-colors"
-            >
-              LinkedIn
-            </a>
+            {socialLinks.slice(0, 2).map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono uppercase tracking-wider hover:text-accent transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           <button 
