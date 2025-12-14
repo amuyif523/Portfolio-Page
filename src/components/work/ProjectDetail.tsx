@@ -33,7 +33,7 @@ export function ProjectDetail({ project, nextProject, prevProject }: ProjectDeta
       gsap.from('[data-animate-image]', {
         y: 100,
         opacity: 0,
-        duration: 1.5,
+        duration: 1.8,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: '[data-animate-image]',
@@ -47,7 +47,7 @@ export function ProjectDetail({ project, nextProject, prevProject }: ProjectDeta
         gsap.from(section, {
           y: 50,
           opacity: 0,
-          duration: 1,
+          duration: 1.2,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: section,

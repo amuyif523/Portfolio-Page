@@ -25,7 +25,7 @@ export function Projects() {
       gsap.to(previewRef.current, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.5,
+        duration: 0.6,
         ease: 'power2.out',
       })
     }
@@ -43,7 +43,7 @@ export function Projects() {
         scale: 1,
         opacity: 1,
         filter: 'blur(0px)',
-        duration: 0.4,
+        duration: 0.5,
         ease: 'power3.out',
       })
     } else {
@@ -51,7 +51,7 @@ export function Projects() {
         scale: 0.96,
         opacity: 0,
         filter: 'blur(4px)',
-        duration: 0.3,
+        duration: 0.4,
         ease: 'power3.in',
       })
     }

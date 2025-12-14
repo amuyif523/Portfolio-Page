@@ -26,7 +26,7 @@ export function Contact() {
     gsap.from('[data-animate-contact]', {
       y: 100,
       opacity: 0,
-      duration: 1,
+      duration: 1.2,
       stagger: 0.1,
       ease: 'power3.out',
       scrollTrigger: {

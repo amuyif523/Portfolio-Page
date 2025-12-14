@@ -24,20 +24,20 @@ export function Skills() {
     tl.from('[data-animate-title]', {
       y: 50,
       opacity: 0,
-      duration: 1,
+      duration: 1.2,
       ease: 'power3.out'
     })
     .from('[data-animate-category]', {
       y: 50,
       opacity: 0,
-      duration: 0.8,
+      duration: 1.0,
       stagger: 0.2,
       ease: 'power3.out'
     }, '-=0.5')
     .from('[data-animate-skill]', {
       scale: 0,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.6,
       stagger: {
         amount: 0.5,
         from: "random"

@@ -22,9 +22,9 @@ export const tokens = {
   },
   motion: {
     duration: {
-      fast: 0.3,
-      normal: 0.8,
-      slow: 1.2,
+      fast: 0.4,
+      normal: 1.0,
+      slow: 1.5,
     },
     ease: {
       default: [0.16, 1, 0.3, 1], // Expo out-ish
