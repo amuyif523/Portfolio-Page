@@ -20,8 +20,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Creative Technologist",
-  description: "Design and build high-impact technical systems.",
+  metadataBase: new URL('https://amanuel.dev'), // Replace with actual domain
+  title: {
+    default: "Amanuel | Creative Technologist",
+    template: "%s | Amanuel"
+  },
+  description: "Senior Creative Technologist specializing in high-impact technical systems, WebGL, and interactive design.",
+  keywords: ["Creative Technologist", "WebGL", "Next.js", "React", "Three.js", "Portfolio"],
+  authors: [{ name: "Amanuel" }],
+  creator: "Amanuel",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://amanuel.dev",
+    title: "Amanuel | Creative Technologist",
+    description: "Design and build high-impact technical systems.",
+    siteName: "Amanuel Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amanuel | Creative Technologist",
+    description: "Design and build high-impact technical systems.",
+    creator: "@amanuel",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
