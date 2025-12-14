@@ -1,6 +1,7 @@
 uniform sampler2D uTexture;
 uniform float uHover;
 uniform float uTime;
+uniform float uOpen;
 uniform vec3 uColor;
 
 varying vec2 vUv;
@@ -21,6 +22,12 @@ void main() {
     vec2 uv = vUv;
     uv.x += sin(uv.y * 10.0 + uTime) * 0.01 * uHover;
     
+    // Warp effect when opening
+    float centerDist = distance(uv, vec2(0.5));
+    uv -= vec2(0.5);
+    uv *= (1.0 - uOpen * 0.5); // Zoom in effect
+    uv += vec2(0.5);
+    
     vec4 textureColor = texture2D(uTexture, uv);
 
     // Mix texture with glass color based on hover
@@ -33,5 +40,11 @@ void main() {
     // Highlight edges on hover
     finalColor += vec3(1.0) * fresnel * uHover * 0.5;
 
-    gl_FragColor = vec4(finalColor, 0.8 + fresnel * 0.2);
+    // Transition to full texture when opening
+    finalColor = mix(finalColor, textureColor.rgb, uOpen);
+    
+    // Add white flash at the end of transition
+    finalColor += vec3(1.0) * smoothstep(0.8, 1.0, uOpen) * 2.0;
+
+    gl_FragColor = vec4(finalColor, 0.8 + fresnel * 0.2 + uOpen);
 }

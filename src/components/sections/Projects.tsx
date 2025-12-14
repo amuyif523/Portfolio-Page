@@ -86,6 +86,7 @@ export function Projects() {
             <Monolith 
               image={activeProject.image} 
               title={activeProject.title}
+              slug={activeProject.slug}
               scale={[1.5, 1.5, 1.5]} 
             />
           )}
