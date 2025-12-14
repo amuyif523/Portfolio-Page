@@ -5,6 +5,7 @@ import { Preload, View } from '@react-three/drei'
 import { r3f } from '@/components/canvas/tunnel'
 import { Perf } from 'r3f-perf'
 import Aether from '@/components/canvas/Aether'
+import CameraRig from '@/components/canvas/CameraRig'
 
 export default function Scene({ ...props }) {
   // Everything defined in here will persist between route changes, only children are swapped
@@ -20,6 +21,7 @@ export default function Scene({ ...props }) {
       {/* @ts-ignore */}
       <r3f.Out />
       <Aether />
+      <CameraRig />
       <Preload all />
       {process.env.NODE_ENV === 'development' && <Perf position="bottom-left" />}
     </Canvas>
