@@ -56,24 +56,25 @@ export function Skills() {
 
         <div className="grid md:grid-cols-3 gap-12 md:gap-8">
           {skills.map((category, idx) => (
-            <div key={category.title} className="flex flex-col gap-8" data-animate-category>
+            <div key={category.title} className="flex flex-col gap-6" data-animate-category>
               <div className="border-b border-accent/20 pb-4">
                 <span className="text-xs font-mono text-accent mb-2 block">0{idx + 1}</span>
                 <h3 className="text-2xl font-display font-bold uppercase">{category.title}</h3>
               </div>
               
-              <div className="flex flex-wrap gap-3">
+              <p className="text-muted text-sm leading-relaxed min-h-[3rem]">
+                {category.promise}
+              </p>
+
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
                 {category.items.map((item) => (
-                  <div
+                  <span
                     key={item}
                     data-animate-skill
-                    className="group relative overflow-hidden px-4 py-2 rounded-full border border-border bg-background/50 hover:border-accent transition-colors duration-300 cursor-default"
+                    className="text-sm font-mono text-foreground/80"
                   >
-                    <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                    <span className="relative z-10 text-sm font-mono text-muted group-hover:text-background transition-colors duration-300">
-                      {item}
-                    </span>
-                  </div>
+                    {item}
+                  </span>
                 ))}
               </div>
             </div>

@@ -1,19 +1,23 @@
 export interface SkillCategory {
   title: string
+  promise: string
   items: string[]
 }
 
 export const skills: SkillCategory[] = [
   {
-    title: "Creative Dev",
-    items: ["WebGL", "Three.js", "GLSL Shaders", "React Three Fiber", "GSAP", "Lenis"]
+    title: "Interface Systems",
+    promise: "Micro-interactions that feel physical, responsive, and inevitable.",
+    items: ["React", "GSAP", "WebGL", "Tailwind"]
   },
   {
-    title: "Frontend",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Zustand"]
+    title: "Intelligence Systems",
+    promise: "Data flow and logic that scales without fragility.",
+    items: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"]
   },
   {
-    title: "Backend / Ops",
-    items: ["Node.js", "PostgreSQL", "Supabase", "Docker", "AWS", "Vercel"]
+    title: "Delivery Systems",
+    promise: "Infrastructure designed for speed, security, and zero downtime.",
+    items: ["Vercel", "Docker", "AWS", "CI/CD"]
   }
 ]
