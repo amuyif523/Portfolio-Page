@@ -5,11 +5,15 @@ import { skills } from '@/lib/content/skills'
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/motion'
+import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 
 export function Skills() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = usePrefersReducedMotion()
 
   useGSAP(() => {
+    if (prefersReducedMotion) return
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -41,7 +45,7 @@ export function Skills() {
       ease: 'back.out(1.7)'
     }, '-=0.5')
 
-  }, { scope: containerRef })
+  }, { scope: containerRef, dependencies: [prefersReducedMotion] })
 
   return (
     <section id="skills" className="py-32 relative" ref={containerRef}>

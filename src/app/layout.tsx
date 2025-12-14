@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { SkipLink } from "@/components/layout/SkipLink";
 import "./globals.css";
 
 const syne = Syne({
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body
         className={`${syne.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground font-sans`}
       >
+        <SkipLink />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

@@ -8,7 +8,7 @@ import { Contact } from '@/components/sections/Contact'
 
 export default function Home() {
   return (
-    <main className="relative w-full overflow-hidden">
+    <main id="main-content" className="relative w-full overflow-hidden">
       <Header />
       <Hero />
       <About />

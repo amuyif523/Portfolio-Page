@@ -60,7 +60,7 @@ export function ProjectDetail({ project, nextProject, prevProject }: ProjectDeta
   )
 
   return (
-    <main className="relative w-full overflow-hidden bg-background min-h-screen" ref={containerRef}>
+    <main id="main-content" className="relative w-full overflow-hidden bg-background min-h-screen" ref={containerRef}>
       <Header />
       
       {/* Hero Section */}

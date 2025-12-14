@@ -7,10 +7,12 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/motion'
 import { contactInfo, socialLinks } from '@/lib/content/socials'
 import { cn } from '@/lib/utils'
+import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 
 export function Contact() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [copied, setCopied] = useState(false)
+  const prefersReducedMotion = usePrefersReducedMotion()
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(contactInfo.email)
@@ -19,6 +21,8 @@ export function Contact() {
   }
 
   useGSAP(() => {
+    if (prefersReducedMotion) return
+
     gsap.from('[data-animate-contact]', {
       y: 100,
       opacity: 0,
@@ -30,7 +34,7 @@ export function Contact() {
         start: 'top 70%',
       },
     })
-  }, { scope: containerRef })
+  }, { scope: containerRef, dependencies: [prefersReducedMotion] })
 
   return (
     <section id="contact" className="py-32 md:py-48 relative overflow-hidden" ref={containerRef}>
