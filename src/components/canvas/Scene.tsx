@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Preload, View } from '@react-three/drei'
 import { r3f } from '@/components/canvas/tunnel'
 import { Perf } from 'r3f-perf'
+import Aether from '@/components/canvas/Aether'
 
 export default function Scene({ ...props }) {
   // Everything defined in here will persist between route changes, only children are swapped
@@ -18,6 +19,7 @@ export default function Scene({ ...props }) {
       <View.Port />
       {/* @ts-ignore */}
       <r3f.Out />
+      <Aether />
       <Preload all />
       {process.env.NODE_ENV === 'development' && <Perf position="bottom-left" />}
     </Canvas>
