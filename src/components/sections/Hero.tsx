@@ -37,10 +37,10 @@ export function Hero() {
 
         <h1 className="text-[13vw] leading-[0.8] font-bold font-display uppercase tracking-tighter mix-blend-difference">
           <div className="overflow-hidden">
-            <div data-animate>Creative</div>
+            <div data-animate className="will-change-transform">Creative</div>
           </div>
           <div className="overflow-hidden">
-            <span data-animate className="text-accent block">
+            <span data-animate className="text-accent block will-change-transform">
               Technologist
             </span>
           </div>
@@ -48,13 +48,13 @@ export function Hero() {
 
         <div className="grid md:grid-cols-[1fr_auto] gap-12 mt-12 items-end">
           <div className="overflow-hidden">
-            <p data-animate className="max-w-xl text-xl md:text-2xl text-muted leading-relaxed">
+            <p data-animate className="max-w-xl text-xl md:text-2xl text-muted leading-relaxed will-change-transform">
               I design and build high-impact technical systems with product and creative sensibility.
             </p>
           </div>
           
           <div className="overflow-hidden">
-            <div data-animate>
+            <div data-animate className="will-change-transform">
               <Link 
                 href="#work"
                 className="group relative inline-flex items-center gap-4 px-8 py-4 bg-foreground text-background font-bold uppercase tracking-wide hover:bg-accent transition-colors duration-300"

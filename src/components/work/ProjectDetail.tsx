@@ -67,14 +67,14 @@ export function ProjectDetail({ project, nextProject, prevProject }: ProjectDeta
       <section className="pt-40 pb-20 md:pt-60 md:pb-32">
         <Container>
           <div className="flex flex-col gap-8">
-            <Link href="/#work" className="text-sm font-mono text-muted hover:text-accent transition-colors uppercase tracking-wider w-fit" data-animate-hero>
+            <Link href="/#work" className="text-sm font-mono text-muted hover:text-accent transition-colors uppercase tracking-wider w-fit will-change-transform" data-animate-hero>
               ← Back to Work
             </Link>
             <h1 className="text-5xl md:text-8xl font-display font-bold uppercase leading-[0.9] overflow-hidden">
-              <span className="block" data-animate-hero>{project.title}</span>
+              <span className="block will-change-transform" data-animate-hero>{project.title}</span>
             </h1>
             <div className="flex flex-wrap gap-4 text-sm font-mono text-accent uppercase tracking-wider overflow-hidden">
-              <div className="flex gap-4" data-animate-hero>
+              <div className="flex gap-4 will-change-transform" data-animate-hero>
                 <span>{project.year}</span>
                 <span>—</span>
                 <span>{project.client}</span>

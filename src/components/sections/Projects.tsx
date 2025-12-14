@@ -71,7 +71,7 @@ export function Projects() {
       {!prefersReducedMotion && (
         <div
           ref={previewRef}
-          className="pointer-events-none fixed top-0 left-0 z-50 h-[300px] w-[400px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-lg opacity-0 hidden md:block"
+          className="pointer-events-none fixed top-0 left-0 z-50 h-[300px] w-[400px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-lg opacity-0 hidden md:block will-change-transform"
         >
           {activeProject?.image && (
             <div className="relative h-full w-full bg-muted">
@@ -80,6 +80,7 @@ export function Projects() {
                 alt={activeProject.title}
                 fill
                 className="object-cover"
+                sizes="400px"
               />
             </div>
           )}

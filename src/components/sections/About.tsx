@@ -68,12 +68,12 @@ export function About() {
       <Container>
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-24 items-center">
           {/* Image Column */}
-          <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-muted/10" ref={imageRef}>
+          <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-muted/10 will-change-[clip-path]" ref={imageRef}>
             <Image
               src="/images/portrait.jpg"
               alt="Portrait of Amanuel"
               fill
-              className="object-cover scale-110 grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover scale-110 grayscale hover:grayscale-0 transition-all duration-700 will-change-transform"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-accent/10 mix-blend-overlay opacity-0 hover:opacity-100 transition-opacity duration-500" />

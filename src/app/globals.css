@@ -145,3 +145,7 @@ html.lenis, html.lenis body {
     scroll-behavior: auto !important;
   }
 }
+
+@utility will-change-transform {
+  will-change: transform;
+}
