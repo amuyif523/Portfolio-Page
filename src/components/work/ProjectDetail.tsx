@@ -75,9 +75,9 @@ export function ProjectDetail({ project, nextProject, prevProject }: ProjectDeta
             </h1>
             <div className="flex flex-wrap gap-4 text-sm font-mono text-accent uppercase tracking-wider overflow-hidden">
               <div className="flex gap-4 will-change-transform" data-animate-hero>
+                <span>{project.role}</span>
+                <span>·</span>
                 <span>{project.year}</span>
-                <span>—</span>
-                <span>{project.client}</span>
               </div>
             </div>
           </div>

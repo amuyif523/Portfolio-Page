@@ -42,8 +42,8 @@ export function Contact() {
         <div className="flex flex-col items-center text-center">
           <h2 className="text-[10vw] leading-[0.85] font-display font-bold uppercase mb-12 tracking-tighter">
             <span className="block will-change-transform" data-animate-contact>Let&apos;s</span>
-            <span className="block text-accent will-change-transform" data-animate-contact>Work</span>
-            <span className="block will-change-transform" data-animate-contact>Together</span>
+            <span className="block text-accent will-change-transform" data-animate-contact>Talk</span>
+            <span className="block will-change-transform" data-animate-contact>Systems</span>
           </h2>
           
           <div data-animate-contact className="mt-8 relative group will-change-transform">
