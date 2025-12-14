@@ -64,7 +64,7 @@ export function About() {
   )
 
   return (
-    <section id="about" className="py-40 relative" ref={containerRef}>
+    <section id="about" className="py-24 md:py-40 relative" ref={containerRef}>
       <Container>
         <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-12 md:gap-24 items-start">
           {/* Image Column */}

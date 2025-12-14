@@ -37,7 +37,7 @@ export function Contact() {
   }, { scope: containerRef, dependencies: [prefersReducedMotion] })
 
   return (
-    <section id="contact" className="py-40 md:py-60 relative overflow-hidden" ref={containerRef}>
+    <section id="contact" className="py-32 md:py-48 relative overflow-hidden" ref={containerRef}>
       <Container>
         <div className="flex flex-col items-center text-center">
           <h2 className="text-[10vw] leading-[0.85] font-display font-bold uppercase mb-12 tracking-tighter">

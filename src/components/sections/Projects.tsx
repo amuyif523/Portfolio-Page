@@ -68,7 +68,7 @@ export function Projects() {
   const activeProject = projects.find((p) => p.id === hoveredId)
 
   return (
-    <section id="work" className="py-40 relative" ref={containerRef}>
+    <section id="work" className="py-24 md:py-40 relative" ref={containerRef}>
       {/* Floating Preview */}
       {!prefersReducedMotion && (
         <div
@@ -106,7 +106,7 @@ export function Projects() {
               key={project.id}
               href={`/work/${project.slug}`}
               className={cn(
-                "group relative py-8 md:py-12 transition-all duration-500 outline-none hover:bg-white/5 active:bg-white/5 -mx-4 px-4 rounded-lg",
+                "group relative py-8 md:py-12 transition-all duration-500 outline-none hover:bg-white/5 active:bg-white/5 -mx-4 md:-mx-6 px-4 md:px-6 rounded-lg",
                 hoveredId && hoveredId !== project.id ? "opacity-30 scale-[0.99]" : "opacity-100 scale-100"
               )}
               onMouseEnter={() => setHoveredId(project.id)}

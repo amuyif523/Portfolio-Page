@@ -64,7 +64,7 @@ export function ProjectDetail({ project, nextProject, prevProject }: ProjectDeta
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-20 md:pt-60 md:pb-32">
+      <section className="pt-32 pb-16 md:pt-48 md:pb-32">
         <Container>
           <div className="flex flex-col gap-8">
             <Link href="/#work" className="text-sm font-mono text-muted hover:text-accent transition-colors uppercase tracking-wider w-fit will-change-transform" data-animate-hero>

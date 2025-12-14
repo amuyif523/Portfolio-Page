@@ -48,7 +48,7 @@ export function Skills() {
   }, { scope: containerRef, dependencies: [prefersReducedMotion] })
 
   return (
-    <section id="skills" className="py-32 relative" ref={containerRef}>
+    <section id="skills" className="py-24 md:py-40 relative" ref={containerRef}>
       <Container>
         <h2 className="text-4xl md:text-6xl font-display font-bold uppercase mb-24 overflow-hidden">
           <span data-animate-title className="block">Capabilities</span>
