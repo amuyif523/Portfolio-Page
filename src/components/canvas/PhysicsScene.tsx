@@ -2,9 +2,9 @@
 
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useRef, useState, useEffect } from 'react'
-import * as THREE from 'three'
+import { useState } from 'react'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Plane(props: any) {
   const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0], ...props }))
   return (
@@ -15,6 +15,7 @@ function Plane(props: any) {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Cube({ position, args = [1, 1, 1], color = 'white' }: any) {
   const [ref, api] = useBox(() => ({ mass: 1, position, args }))
   const [hovered, setHover] = useState(false)

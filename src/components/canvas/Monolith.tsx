@@ -32,12 +32,12 @@ const Monolith = ({
 
   useFrame((state, delta) => {
     if (mesh.current) {
-      // @ts-ignore
+      // @ts-expect-error - Uniforms are dynamic
       mesh.current.material.uniforms.uTime.value = state.clock.getElapsedTime()
       
       // Animate hover uniform
       easing.damp(
-        // @ts-ignore
+        // @ts-expect-error - Uniforms are dynamic
         mesh.current.material.uniforms.uHover,
         'value',
         hovered ? 1 : 0,
@@ -47,7 +47,7 @@ const Monolith = ({
 
       // Animate open uniform
       easing.damp(
-        // @ts-ignore
+        // @ts-expect-error - Uniforms are dynamic
         mesh.current.material.uniforms.uOpen,
         'value',
         clicked ? 1 : 0,
