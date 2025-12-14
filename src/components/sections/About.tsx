@@ -70,7 +70,7 @@ export function About() {
           {/* Image Column */}
           <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-muted/10 will-change-[clip-path]" ref={imageRef}>
             <Image
-              src="/images/portrait.jpg"
+              src="/images/portrait.png"
               alt="Portrait of Amanuel"
               fill
               className="object-cover scale-110 grayscale hover:grayscale-0 transition-all duration-700 will-change-transform"
