@@ -54,6 +54,7 @@ export function Hero() {
             </span>
           </div>
         </h1>
+        </div>
 
         <div className="grid md:grid-cols-[1fr_auto] gap-12 mt-12 items-end pointer-events-auto">
           <div className="overflow-hidden">
