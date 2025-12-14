@@ -25,16 +25,6 @@ export function Hero() {
     <section ref={containerRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <Grain />
       <Container className="relative z-10">
-        <div className="overflow-hidden mb-6">
-          <div data-animate className="flex items-center gap-2 text-sm font-mono uppercase tracking-wider text-accent">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
-            Available for new projects
-          </div>
-        </div>
-
         <h1 className="text-[13vw] leading-[0.8] font-bold font-display uppercase tracking-tighter mix-blend-difference">
           <div className="overflow-hidden">
             <div data-animate className="will-change-transform">Creative</div>
@@ -49,7 +39,7 @@ export function Hero() {
         <div className="grid md:grid-cols-[1fr_auto] gap-12 mt-12 items-end">
           <div className="overflow-hidden">
             <p data-animate className="max-w-xl text-xl md:text-2xl text-muted leading-relaxed will-change-transform">
-              I design and build high-impact technical systems with product and creative sensibility.
+              Building high-impact technical systems with creative sensibility.
             </p>
           </div>
           

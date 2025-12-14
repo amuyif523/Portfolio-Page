@@ -64,7 +64,7 @@ export function About() {
   )
 
   return (
-    <section id="about" className="py-32 relative" ref={containerRef}>
+    <section id="about" className="py-40 relative" ref={containerRef}>
       <Container>
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-24 items-center">
           {/* Image Column */}
@@ -82,19 +82,19 @@ export function About() {
           {/* Text Column */}
           <div className="space-y-8">
             <h2 className="about-text text-4xl md:text-6xl font-display font-bold uppercase leading-none">
-              More than just <br />
+              Beyond <br />
               <span className="text-accent">Clean Code</span>
             </h2>
             
             <div className="space-y-6 text-lg md:text-xl text-muted leading-relaxed">
               <p className="about-text">
-                I bridge the gap between engineering and design. While others stop at "functional," I push for "exceptional."
+                Bridging the gap between engineering and design. I don't just build functional software; I build exceptional experiences.
               </p>
               <p className="about-text">
-                With a background in full-stack development and a deep appreciation for motion, I build software that feels as good as it looks.
+                With deep roots in full-stack development and motion design, I create software that feels as good as it looks.
               </p>
               <p className="about-text">
-                My philosophy is simple: <strong className="text-foreground">Performance is a feature.</strong> Every interaction should be instant, every animation intentional, and every line of code necessary.
+                <strong className="text-foreground">Performance is a feature.</strong> Every interaction instant, every animation intentional.
               </p>
             </div>
 

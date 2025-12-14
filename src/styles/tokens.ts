@@ -23,8 +23,8 @@ export const tokens = {
   motion: {
     duration: {
       fast: 0.3,
-      normal: 0.6,
-      slow: 1.0,
+      normal: 0.8,
+      slow: 1.2,
     },
     ease: {
       default: [0.16, 1, 0.3, 1], // Expo out-ish

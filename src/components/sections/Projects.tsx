@@ -66,7 +66,7 @@ export function Projects() {
   const activeProject = projects.find((p) => p.id === hoveredId)
 
   return (
-    <section id="work" className="py-32 relative" ref={containerRef}>
+    <section id="work" className="py-40 relative" ref={containerRef}>
       {/* Floating Preview */}
       {!prefersReducedMotion && (
         <div
