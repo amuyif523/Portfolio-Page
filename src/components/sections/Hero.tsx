@@ -47,9 +47,9 @@ export function Hero() {
             <div data-animate className="will-change-transform">
               <Link 
                 href="#work"
-                className="group relative inline-flex items-center gap-4 px-8 py-4 bg-foreground text-background font-bold uppercase tracking-wide hover:bg-accent transition-colors duration-300"
+                className="group relative inline-flex items-center gap-2 text-lg font-bold uppercase tracking-wide hover:text-accent transition-colors duration-300"
               >
-                <span>View Selected Work</span>
+                <span>View Work</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </Link>
             </div>

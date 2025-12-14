@@ -89,7 +89,7 @@ export function Projects() {
 
       <Container>
         <h2 className="text-4xl md:text-6xl font-display font-bold uppercase mb-16 overflow-hidden">
-          <span data-animate className="block">Selected Work</span>
+          <span data-animate className="block">Work</span>
         </h2>
         <div className="flex flex-col">
           {projects.map((project) => (

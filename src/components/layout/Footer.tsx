@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="py-8 border-t border-border bg-background">
       <Container className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-xs font-mono text-muted uppercase tracking-wider">
-          &copy; {new Date().getFullYear()} Amanuel. All rights reserved.
+          &copy; {new Date().getFullYear()} Amanuel
         </div>
         
         <div className="flex items-center gap-8">
@@ -33,7 +33,7 @@ export function Footer() {
             onClick={() => lenis?.scrollTo(0)}
             className="text-xs font-mono uppercase tracking-wider hover:text-accent transition-colors"
           >
-            Back to Top ↑
+            Top ↑
           </button>
         </div>
       </Container>
