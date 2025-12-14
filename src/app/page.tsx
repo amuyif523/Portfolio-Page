@@ -1,7 +1,19 @@
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { Hero } from '@/components/sections/Hero'
+import { About } from '@/components/sections/About'
+import { Projects } from '@/components/sections/Projects'
+import { Contact } from '@/components/sections/Contact'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Portfolio Initialized</h1>
+    <main className="relative w-full overflow-hidden">
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </main>
   )
 }
