@@ -1,3 +1,5 @@
+'use client'
+
 import { Container } from '@/components/layout/Container'
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'

@@ -18,6 +18,30 @@
   --spacing-3xl: 12rem;
 }
 
+/* Global Selection Color */
+::selection {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
 @theme inline {
   /* Colors */
   --color-background: var(--background);
