@@ -55,16 +55,9 @@ export function HyperText({
     // Trigger on mount (with delay)
     const timeout = setTimeout(startScramble, delay)
 
-    // Trigger on hover
-    const el = elementRef.current
-    if (el) {
-        el.addEventListener('mouseenter', startScramble)
-    }
-
     return () => {
         clearTimeout(timeout)
         clearInterval(interval)
-        if (el) el.removeEventListener('mouseenter', startScramble)
     }
   }, [children, delay, prefersReducedMotion])
 

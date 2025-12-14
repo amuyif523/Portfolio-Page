@@ -26,7 +26,7 @@ export function Hero() {
     <section ref={containerRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <Grain />
       <Container className="relative z-10">
-        <h1 className="text-[13vw] leading-[0.8] font-bold font-display uppercase tracking-tighter md:mix-blend-difference">
+        <h1 className="text-[clamp(3.5rem,11vw,10rem)] leading-[0.8] font-bold font-display uppercase tracking-tighter md:mix-blend-difference">
           <div className="overflow-hidden">
             <div data-animate className="will-change-transform">
               <HyperText delay={500}>Creative</HyperText>
@@ -42,7 +42,7 @@ export function Hero() {
         <div className="grid md:grid-cols-[1fr_auto] gap-12 mt-12 items-end">
           <div className="overflow-hidden">
             <p data-animate className="max-w-xl text-xl md:text-2xl text-muted leading-relaxed will-change-transform">
-              Building high-impact technical systems with creative sensibility.
+              I design and ship systems where engineering and clarity meet.
             </p>
           </div>
           
@@ -50,10 +50,10 @@ export function Hero() {
             <div data-animate className="will-change-transform">
               <Link 
                 href="#work"
-                className="group relative inline-flex items-center gap-2 text-lg font-bold uppercase tracking-wide hover:text-accent transition-colors duration-300"
+                className="group relative inline-flex items-center gap-2 text-lg font-bold uppercase tracking-wide hover:text-accent transition-colors duration-500"
               >
                 <span>View Work</span>
-                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">→</span>
               </Link>
             </div>
           </div>
