@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { SkipLink } from "@/components/layout/SkipLink";
+import dynamic from 'next/dynamic'
+import { Loader } from '@react-three/drei'
 import "./globals.css";
+
+const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
 
 const syne = Syne({
   variable: "--font-syne",
@@ -68,6 +72,8 @@ export default function RootLayout({
         className={`${syne.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground font-sans`}
       >
         <SkipLink />
+        <Scene />
+        <Loader />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
