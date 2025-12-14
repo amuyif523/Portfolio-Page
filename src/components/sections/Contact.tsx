@@ -48,30 +48,29 @@ export function Contact() {
           
           <div data-animate-contact className="mt-8 relative group will-change-transform">
             <Magnetic strength={0.2} range={6}>
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center justify-center w-48 h-48 md:w-64 md:h-64 rounded-full bg-accent text-background text-xl md:text-2xl font-bold uppercase tracking-wider hover:scale-110 transition-transform duration-500 will-change-transform"
+              <button
+                onClick={handleCopyEmail}
+                className="inline-flex items-center justify-center w-40 h-40 md:w-56 md:h-56 rounded-full bg-accent text-background text-xl md:text-2xl font-bold uppercase tracking-wider hover:scale-105 transition-all duration-500 will-change-transform"
               >
-                {contactInfo.button}
-              </a>
+                <span className={cn("transition-opacity duration-300", copied ? "opacity-0 absolute" : "opacity-100")}>
+                  {contactInfo.button}
+                </span>
+                <span className={cn("transition-opacity duration-300 absolute", copied ? "opacity-100" : "opacity-0")}>
+                  Copied!
+                </span>
+              </button>
             </Magnetic>
           </div>
 
           <div className="mt-24 flex flex-col md:flex-row gap-8 md:gap-16 will-change-transform" data-animate-contact>
             <div className="flex flex-col gap-2 items-center md:items-start">
-              <span className="text-xs font-mono text-muted uppercase tracking-wider">Contact</span>
-              <button 
-                onClick={handleCopyEmail}
+              <span className="text-xs font-mono text-muted uppercase tracking-wider">Email</span>
+              <a 
+                href={`mailto:${contactInfo.email}`}
                 className="text-lg hover:text-accent transition-colors relative group"
               >
                 {contactInfo.email}
-                <span className={cn(
-                  "absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-mono bg-accent text-background px-2 py-1 rounded opacity-0 transition-opacity",
-                  copied && "opacity-100"
-                )}>
-                  Copied!
-                </span>
-              </button>
+              </a>
             </div>
             <div className="flex flex-col gap-2 items-center md:items-start">
               <span className="text-xs font-mono text-muted uppercase tracking-wider">Socials</span>
