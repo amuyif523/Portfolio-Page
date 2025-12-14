@@ -1,5 +1,6 @@
 export interface Project {
   id: string
+  slug: string
   title: string
   description: string
   tech: string[]
@@ -7,6 +8,11 @@ export interface Project {
   github?: string
   image?: string
   year: string
+  client?: string
+  role?: string
+  challenge?: string
+  solution?: string
+  gallery?: string[]
 }
 
 export interface NavItem {
