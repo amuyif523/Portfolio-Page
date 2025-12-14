@@ -8,6 +8,13 @@ import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 import { Grain } from '@/components/ui/Grain'
 import { Magnetic } from '@/components/ui/Magnetic'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+
+const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
+  ssr: false,
+  loading: () => null,
+})
+const PhysicsScene = dynamic(() => import('@/components/canvas/PhysicsScene'), { ssr: false })
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -25,8 +32,17 @@ export function Hero() {
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <Grain />
-      <Container className="relative z-10">
-        <h1 className="text-[clamp(3.5rem,11vw,10rem)] leading-[0.8] font-bold font-display uppercase tracking-tighter">
+      
+      {/* Physics Playground Background */}
+      {!prefersReducedMotion && (
+        <View className="absolute inset-0 -z-10 pointer-events-none md:pointer-events-auto">
+          <PhysicsScene />
+        </View>
+      )}
+
+      <Container className="relative z-10 pointer-events-none">
+        <div className="pointer-events-auto">
+          <h1 className="text-[clamp(3.5rem,11vw,10rem)] leading-[0.8] font-bold font-display uppercase tracking-tighter">
           <div className="overflow-hidden">
             <div data-animate className="will-change-transform">
               Creative
@@ -39,7 +55,7 @@ export function Hero() {
           </div>
         </h1>
 
-        <div className="grid md:grid-cols-[1fr_auto] gap-12 mt-12 items-end">
+        <div className="grid md:grid-cols-[1fr_auto] gap-12 mt-12 items-end pointer-events-auto">
           <div className="overflow-hidden">
             <p data-animate className="max-w-xl text-xl md:text-2xl text-muted leading-relaxed will-change-transform">
               I design and ship systems where engineering and clarity meet.
