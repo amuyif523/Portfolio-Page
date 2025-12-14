@@ -60,7 +60,15 @@ When adding new components, always verify:
    - Use the `usePrefersReducedMotion` hook.
    - Wrap GSAP animations in `if (prefersReducedMotion) return`.
 
-## 5. Deployment
+## 5. Signature Interaction (HyperText)
+
+The Hero section features a "HyperText" scramble effect on the main title.
+- **Component**: `src/components/ui/HyperText.tsx`
+- **Usage**: Wrap text with `<HyperText delay={500}>Text</HyperText>`.
+- **Behavior**: Cycles through random characters before resolving.
+- **Accessibility**: Automatically disabled if `prefers-reduced-motion` is set.
+
+## 6. Deployment
 
 The project is configured for Vercel.
 

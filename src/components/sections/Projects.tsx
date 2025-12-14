@@ -97,7 +97,7 @@ export function Projects() {
               key={project.id}
               href={`/work/${project.slug}`}
               className={cn(
-                "group relative border-t border-border py-12 transition-all duration-500 outline-none",
+                "group relative py-16 transition-all duration-500 outline-none hover:bg-white/5 -mx-4 px-4 rounded-lg",
                 hoveredId && hoveredId !== project.id ? "opacity-30 scale-[0.99]" : "opacity-100 scale-100"
               )}
               onMouseEnter={() => setHoveredId(project.id)}

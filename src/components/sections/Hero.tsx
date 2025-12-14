@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { presets } from '@/lib/motion/presets'
 import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 import { Grain } from '@/components/ui/Grain'
+import { HyperText } from '@/components/ui/HyperText'
 import Link from 'next/link'
 
 export function Hero() {
@@ -25,13 +26,15 @@ export function Hero() {
     <section ref={containerRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <Grain />
       <Container className="relative z-10">
-        <h1 className="text-[13vw] leading-[0.8] font-bold font-display uppercase tracking-tighter mix-blend-difference">
+        <h1 className="text-[13vw] leading-[0.8] font-bold font-display uppercase tracking-tighter md:mix-blend-difference">
           <div className="overflow-hidden">
-            <div data-animate className="will-change-transform">Creative</div>
+            <div data-animate className="will-change-transform">
+              <HyperText delay={500}>Creative</HyperText>
+            </div>
           </div>
           <div className="overflow-hidden">
             <span data-animate className="text-accent block will-change-transform">
-              Technologist
+              <HyperText delay={800}>Technologist</HyperText>
             </span>
           </div>
         </h1>
