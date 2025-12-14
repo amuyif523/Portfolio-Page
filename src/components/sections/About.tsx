@@ -76,7 +76,6 @@ export function About() {
               className="object-cover scale-110 grayscale contrast-125 will-change-transform"
               sizes="(max-width: 768px) 100vw, 40vw"
             />
-            <div className="absolute inset-0 bg-accent/10 mix-blend-overlay" />
           </div>
 
           {/* Text Column */}
