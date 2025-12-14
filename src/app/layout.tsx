@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { SkipLink } from "@/components/layout/SkipLink";
-import { Loader } from '@react-three/drei'
+import ClientLoader from '@/components/canvas/ClientLoader'
 import "./globals.css";
 import SceneWrapper from '@/components/canvas/SceneWrapper'
 
@@ -71,7 +71,7 @@ export default function RootLayout({
       >
         <SkipLink />
         <SceneWrapper />
-        <Loader />
+        <ClientLoader />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
