@@ -7,6 +7,7 @@ import { presets } from '@/lib/motion/presets'
 import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 import { Grain } from '@/components/ui/Grain'
 import { HyperText } from '@/components/ui/HyperText'
+import { Magnetic } from '@/components/ui/Magnetic'
 import Link from 'next/link'
 
 export function Hero() {
@@ -48,13 +49,15 @@ export function Hero() {
           
           <div className="overflow-hidden">
             <div data-animate className="will-change-transform">
-              <Link 
-                href="#work"
-                className="group relative inline-flex items-center gap-2 text-lg font-bold uppercase tracking-wide hover:text-accent transition-colors duration-500"
-              >
-                <span>View Work</span>
-                <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">→</span>
-              </Link>
+              <Magnetic strength={0.2} range={5}>
+                <Link 
+                  href="#work"
+                  className="group relative inline-flex items-center gap-2 text-lg font-bold uppercase tracking-wide hover:text-accent transition-colors duration-500 p-4 -m-4"
+                >
+                  <span>View Work</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">→</span>
+                </Link>
+              </Magnetic>
             </div>
           </div>
         </div>

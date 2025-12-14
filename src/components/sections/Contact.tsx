@@ -47,7 +47,7 @@ export function Contact() {
           </h2>
           
           <div data-animate-contact className="mt-8 relative group will-change-transform">
-            <Magnetic strength={0.5}>
+            <Magnetic strength={0.2} range={6}>
               <a
                 href={`mailto:${contactInfo.email}`}
                 className="inline-flex items-center justify-center w-48 h-48 md:w-64 md:h-64 rounded-full bg-accent text-background text-xl md:text-2xl font-bold uppercase tracking-wider hover:scale-110 transition-transform duration-500 will-change-transform"
