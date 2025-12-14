@@ -5,11 +5,18 @@ import { projects } from '@/lib/content/projects'
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { cn } from '@/lib/utils'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/motion'
 import { presets } from '@/lib/motion/presets'
 import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
+
+const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
+  ssr: false,
+  loading: () => null,
+})
+const Monolith = dynamic(() => import('@/components/canvas/Monolith'), { ssr: false })
 
 export function Projects() {
   const [hoveredId, setHoveredId] = useState<string | null>(null)
@@ -71,22 +78,18 @@ export function Projects() {
     <section id="work" className="py-24 md:py-40 relative" ref={containerRef}>
       {/* Floating Preview */}
       {!prefersReducedMotion && (
-        <div
+        <View
           ref={previewRef}
-          className="pointer-events-none fixed top-0 left-0 z-50 h-[300px] w-[400px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-lg opacity-0 hidden md:block will-change-transform"
+          className="pointer-events-none fixed top-0 left-0 z-50 h-[400px] w-[300px] -translate-x-1/2 -translate-y-1/2 opacity-0 hidden md:block will-change-transform"
         >
-          {activeProject?.image && (
-            <div className="relative h-full w-full bg-muted">
-              <Image
-                src={activeProject.image}
-                alt={activeProject.title}
-                fill
-                className="object-cover"
-                sizes="400px"
-              />
-            </div>
+          {activeProject && (
+            <Monolith 
+              image={activeProject.image} 
+              title={activeProject.title}
+              scale={[1.5, 1.5, 1.5]} 
+            />
           )}
-        </div>
+        </View>
       )}
 
       <Container>
