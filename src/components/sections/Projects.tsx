@@ -42,15 +42,17 @@ export function Projects() {
       gsap.to(previewRef.current, {
         scale: 1,
         opacity: 1,
-        duration: 0.3,
-        ease: 'power2.out',
+        filter: 'blur(0px)',
+        duration: 0.4,
+        ease: 'power3.out',
       })
     } else {
       gsap.to(previewRef.current, {
-        scale: 0.8,
+        scale: 0.96,
         opacity: 0,
+        filter: 'blur(4px)',
         duration: 0.3,
-        ease: 'power2.in',
+        ease: 'power3.in',
       })
     }
   }, [hoveredId, prefersReducedMotion])
@@ -88,16 +90,23 @@ export function Projects() {
       )}
 
       <Container>
-        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase mb-16 overflow-hidden">
-          <span data-animate className="block">Work</span>
-        </h2>
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-6xl font-display font-bold uppercase mb-6 overflow-hidden">
+            <span data-animate className="block">Work</span>
+          </h2>
+          <div className="overflow-hidden">
+            <p data-animate className="text-muted text-lg md:text-xl max-w-xl">
+              A small selection of systems I’ve designed and built.
+            </p>
+          </div>
+        </div>
         <div className="flex flex-col">
           {projects.map((project) => (
             <Link
               key={project.id}
               href={`/work/${project.slug}`}
               className={cn(
-                "group relative py-16 transition-all duration-500 outline-none hover:bg-white/5 -mx-4 px-4 rounded-lg",
+                "group relative py-8 md:py-12 transition-all duration-500 outline-none hover:bg-white/5 active:bg-white/5 -mx-4 px-4 rounded-lg",
                 hoveredId && hoveredId !== project.id ? "opacity-30 scale-[0.99]" : "opacity-100 scale-100"
               )}
               onMouseEnter={() => setHoveredId(project.id)}
